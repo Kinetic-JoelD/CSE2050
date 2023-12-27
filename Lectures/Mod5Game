@@ -1,0 +1,31 @@
+import random
+# Generates a random nymber bw 1 and 100
+
+# Prompts users for guesses until they get that number
+
+# Tell them too high or too low
+
+
+#Use all caps for constants
+LOW = 1
+HIGH = 100
+
+
+target = random.randint(LOW, HIGH)
+
+guess = int(input("You're trapped in the goblins lair guess the number between 1 and 100 in fewer than 8 tries to escape"))
+
+n_guesses = 1
+
+while guess != target:
+    if guess < target:
+        print('Too low')
+
+    elif guess > target:
+        print('Too high')
+
+
+    guess = int(input("You're trapped in the goblins lair guess the number between 1 and 100 in fewer than 8 tries to escape"))
+    n_guesses += 1
+
+print(f"You got it in {n_guesses} tries. Good Job!")

@@ -1,0 +1,12 @@
+def double(x):
+	return x * 2
+
+print('beginning test')
+
+a = int(12)
+
+l = [i for i in range(a)]
+for number in l:
+	assert double(number) == number * 2
+
+print('finished test')

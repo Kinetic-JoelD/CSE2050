@@ -1,0 +1,47 @@
+class Queue1:
+    def __init__(self):
+        self._L = [] #List wrapper
+    
+    def enqueue(self, item):
+        self._L.insert(0,item) # O(n)
+
+    def dequeue(self):
+        return self._L.pop() #O(1)
+    
+    
+    def __repr__(self):
+        """Returns a string representation that contains all info needed to recreate this object"""
+        #Repr gives a pretty representation
+        return repr(self._L)
+    
+    def __len__(self):
+        return self._L
+    
+class Queue2:
+    def __init__(self):
+        self._L = [] #List wrapper
+    
+    def enqueue(self, item):
+        self._L.append(item) # O(1)
+
+    def dequeue(self):
+        return self._L.pop() # O(n)
+    
+    
+    def __repr__(self):
+        """Returns a string representation that contains all info needed to recreate this object"""
+        #Repr gives a pretty representation
+        return repr(self._L)
+    
+    def __len__(self):
+        return self._L
+
+if __name__ == '__main__':
+    q1 = Queue1()
+    q2 = Queue2()
+
+    n = 20
+
+    for i in range(n):
+        q2.enqueue(i)
+    print(q2)
